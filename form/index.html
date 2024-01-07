@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="flex-col">
+    <div>
+      <form onsubmit="handleSubmit(event)" name="userForm" class="flex-col form">
+        <div class="flex">
+          <label for="firstname" class="flex">
+            First name
+            <input name="firstname" type="text" id="firstname" required />
+          </label>
+          <label for="lastname" class="flex">
+            Last name
+            <input name="lastname" type="text" id="lastname" required />
+          </label>
+        </div>
+        <div class="flex">
+          <label for="age" class="flex">
+            Age
+            <input
+              name="age"
+              type="number"
+              id="age"
+              max="100"
+              min="18"
+              required
+            />
+          </label>
+          <label for="dob" class="flex">
+            Date of Birth
+            <input name="dob" type="date" id="dob" required />
+          </label>
+        </div>
+        <div class="flex">
+          <label for="phone" class="flex">
+            Phone Number
+            <input
+              name="phone"
+              type="number"
+              max="9999999999"
+              min="1000000000"
+              id="phone"
+              required
+            />
+          </label>
+          <label for="gender" class="flex">
+            Gender
+            <select name="gender" type="text" id="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      <p id="danger" class="danger"></p>
+    </div>
+
+    <div id="search" class="flex">
+      <input type="text" id="searchKeyword" />
+      <button onclick="searchUser()">Search</button>
+      <button onclick="sortTable()">Sort By Age</button>
+      <div></div>
+    </div>
+
+    <div id="user-table"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
